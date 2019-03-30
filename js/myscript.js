@@ -34,7 +34,7 @@ function change1(e) {
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`;    
 
-        // Creating a <td> element and put them at the end of the table row
+        // creating a <td> element and put them at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdcountry(countries[i].Name[lang]));
