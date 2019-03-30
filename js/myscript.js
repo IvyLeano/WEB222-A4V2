@@ -17,8 +17,7 @@ const menu_42 = document.getElementById("menu_42");
 menu_42.addEventListener("click",lang2()  ,false);
 }
 
-function change1(e)
-{
+function change1(e) {
     e.preventDefault();
     document.querySelector("#subtitle").innerHTML = "List of Countries and Dependencies";
     var tb1=document.querySelector("#outputTable");
@@ -31,12 +30,11 @@ function change1(e)
         // creating all table rows
        for (var i = 0; i < countries.length; i++) {
 
-        // creates a table row
+        // creating a table row
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`;    
-        console.log(lang);
 
-        // Create a <td> element and put them at the end of the table row
+        // Creating a <td> element and put them at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdcountry(countries[i].Name[lang]));
@@ -45,7 +43,7 @@ function change1(e)
         row.appendChild(getTdElement(countries[i].Population));
         row.appendChild(getTdElement(countries[i].Capital));
         
-        // add the row to the end of the table body
+        // adding the row to the end of the table body
         tb1Body.appendChild(row);
         }
         tb1.appendChild(tb1Body);
@@ -56,7 +54,7 @@ function change1(e)
          return cell;
         }
 
-        // Create a <td> element and a text
+        // creating a <td> element and a text
         function getTdElement(text) {
          var cell = document.createElement("td");
          var cellText = document.createTextNode(text);
@@ -85,13 +83,13 @@ function change2(e) {
         // creating all table rows
        for (var i = 0; i < countries.length; i++) {
 
-        // creates a table row
+        // creating a table row
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`; 
         var lang = countries[i].Name.English;
     
         if (countries[i].Population > 99999999){
-        // Create a <td> element and put them at the end of the table row
+        // creating a <td> element and placing them at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdElement(lang));
@@ -100,7 +98,7 @@ function change2(e) {
         row.appendChild(getTdElement(countries[i].Population));
         row.appendChild(getTdElement(countries[i].Capital));
         
-        // add the row to the end of the table body
+        // adding the row to the end of the table body
         tb1Body.appendChild(row);
          }
         }
@@ -112,7 +110,7 @@ function change2(e) {
          return cell;
         }
 
-     // Create a <td> element and a text
+     // creating a <td> element and a text
         function getTdElement(text) 
         {
          var cell = document.createElement("td");
@@ -134,13 +132,13 @@ function change3(e) {
        // creating all table rows
        for (var i = 0; i < countries.length; i++) {
        
-        // creates a table row
+        // creating a table row
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`; 
 
         if (countries[i].Population > 999999 && countries[i].Population < 2000001) {
 
-        // Create a <td> element and put them at the end of the table row
+        // creating a <td> element and put them at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdElement(countries[i].Name.English));
@@ -149,7 +147,7 @@ function change3(e) {
         row.appendChild(getTdElement(countries[i].Population));
         row.appendChild(getTdElement(countries[i].Capital));
 
-        // add the row to the end of the table body
+        // adding the row to the end of the table body
         tb1Body.appendChild(row);
          }
         }
@@ -161,7 +159,7 @@ function change3(e) {
          return cell;
         }
 
-        // Create a <td> element and a text
+        // creating a <td> element and a text
         function getTdElement(text) {
          var cell = document.createElement("td");
          var cellText = document.createTextNode(text);
@@ -182,13 +180,13 @@ function change4(e) {
         // creating all table rows
        for (var i = 0; i < countries.length; i++) {
        
-        // creates a table row
+        // createing a table row
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`;
 
         if (countries[i].AreaInKm2 > 1000000 && countries[i].Continent == "Americas") {
 
-        // Create a <td> element and put them at the end of the table row
+        // creating a <td> element and put them at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdElement(countries[i].Name.English));
@@ -196,7 +194,7 @@ function change4(e) {
         row.appendChild(getTdElement(countries[i].AreaInKm2));
         row.appendChild(getTdElement(countries[i].Population));
         row.appendChild(getTdElement(countries[i].Capital));
-        // add the row to the end of the table body
+        // adding the row to the end of the table body
         tb1Body.appendChild(row);
          }
         }
@@ -208,7 +206,7 @@ function change4(e) {
          return cell;
         }
 
-        // Create a <td> element and a text
+        // creating a <td> element and a text
         function getTdElement(text) {
          var cell = document.createElement("td");
          var cellText = document.createTextNode(text);
@@ -227,14 +225,14 @@ function change5(e) {
 
         // creating all table rows
        for (var i = 0; i < countries.length; i++) {
-        // creates a table row
+        // creating a table row
         var row = document.createElement("tr");
         var flag= `flags/${countries[i].Code}.png`; 
         var lang= countries[i].Name.English;
 
         if ( countries[i].Continent == "Asia") {
 
-        // Create a <td> element and put them at the end of the table row
+        // creating a <td> element and placing it at the end of the table row
         row.appendChild(getTdImg(flag));
         row.appendChild(getTdElement(countries[i].Code));
         row.appendChild(getTdElement(lang));
@@ -243,7 +241,7 @@ function change5(e) {
         row.appendChild(getTdElement(countries[i].Population));
         row.appendChild(getTdElement(countries[i].Capital));
 
-        // add the row to the end of the table body
+        // adding the row to the end of the table body
         tb1Body.appendChild(row);
          }
         }
@@ -255,7 +253,7 @@ function change5(e) {
          return cell;
         }
 
-        // Create a <td> element and a text
+        // creating a <td> element and a text
         function getTdElement(text) {
          var cell = document.createElement("td");
          var cellText = document.createTextNode(text);
